@@ -94,6 +94,14 @@
 <main role="main" class="container">
     <div class="starter-template">
         <h1>mini-statement</h1>
+        <div class="btn-group">
+            <form th:action="@{/menu}" method="get">
+                <button type="submit">Main Menu</button>
+            </form>
+            <form th:action="@{/logout}" method="get">
+                <button type="submit">Logout</button>
+            </form>
+        </div>
     </div>
     <table>
         <thead>
@@ -116,14 +124,6 @@
             </tr>
         </tbody>
     </table>
-    <div class="btn-group">
-        <form th:action="@{/menu}" method="get">
-            <button type="submit">Main Menu</button>
-        </form>
-        <form th:action="@{/logout}" method="get">
-            <button type="submit">Logout</button>
-        </form>
-    </div>
 </main>
 
 </body>

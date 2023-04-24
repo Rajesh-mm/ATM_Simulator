@@ -7,9 +7,11 @@ CREATE TABLE users (
 );
 
 INSERT INTO users (id, first_name, last_name) VALUES
-    (1, 'Shipra', 'Behera'),
-    (2, 'Vandana', 'Sridhar'),
-    (3, 'Pranav', 'Sivakumar');
+    (1, 'Rohit', 'H'),
+    (2, 'Sagar', 'S'),
+    (3, 'Ravi', 'Kiran'),
+    (4, 'Rajesh', 'MM');
+
 
 DROP TABLE IF EXISTS accounts;
 
