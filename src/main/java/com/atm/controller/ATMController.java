@@ -58,13 +58,14 @@ public class ATMController {
     @GetMapping("/")
     public String home(HttpServletResponse httpServletResponse) {
         httpServletResponse.setHeader("Refresh", "5;url=ATM");
+
         return "startup";
     }
     
 
     @GetMapping("/shutdown")
     public String shutdown(HttpServletResponse httpServletResponse) {
-        httpServletResponse.setHeader("Refresh", "10;url=blank");
+        httpServletResponse.setHeader("Refresh", "600;url=blank");
 
         return "shutdown";
     }
@@ -82,7 +83,7 @@ public class ATMController {
         model.addAttribute("account", new Account());
 
 
-        httpServletResponse.setHeader("Refresh", "100;url=shutdown");
+        httpServletResponse.setHeader("Refresh", "600;url=shutdown");
         return "welcome"; //view
     }
 
