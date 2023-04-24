@@ -1,0 +1,109 @@
+<!DOCTYPE HTML>
+<html lang="en" xmlns:th="http://www.thymeleaf.org">
+<head>
+
+    <style type="text/css">
+       body {
+            padding-top: 5rem;
+            background-color: #B9EDDD !important;
+        }
+        .starter-template {
+            padding: 3rem 1.5rem;
+            text-align: center;
+        }
+
+        h1{
+            color:#569DAA !important;
+        }
+
+        h2{
+            color:#577D86 !important;
+        }
+
+        .btn-group {
+            display: flex;
+            justify-content: center;
+            margin-top: 20px;
+        }
+
+        .btn-group button {
+            background-color: #87CBB9;
+            border: 1px solid #577D86;
+            color: white;
+            padding: 10px 24px;
+            cursor: pointer;
+            display: inline-block;
+            width: 200px;
+            height: 60px;
+            font-size: 18px;
+            font-weight: bold;
+            margin-right: 20px;
+        }
+
+        .btn-group button {
+            width: auto;
+            white-space: normal;
+        }
+
+        .btn-group button:last-child {
+            margin-right: 0;
+        }
+
+        .btn-group button:hover {
+            background-color: #569DAA;
+            border-color: #B9EDDD;
+        }
+    </style>
+    
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+
+    <title>ATM Simulator</title>
+
+    <link rel="stylesheet" th:href="@{webjars/bootstrap/4.2.1/css/bootstrap.min.css}"/>
+
+</head>
+
+<body>
+
+<!-- <nav class="navbar navbar-expand-md navbar-dark bg-dark fixed-top">
+    <a class="navbar-brand" href="#">CSCI 5448 OOAD</a>
+</nav> -->
+
+<main role="main" class="container">
+
+    <div class="starter-template">
+        <h1>Main Menu</h1>
+        <h4 th:text="${Text}"></h4>
+        <div class="btn-group">
+            <form th:action="@{/balance}" method="get">
+                <button type="submit">View Balance</button>
+            </form>
+            <form th:action="@{/withdraw}" method="get">
+                <button type="submit">Withdraw</button>
+            </form>
+            <form th:action="@{/deposit}" method="get">
+                <button type="submit">Deposit</button>
+            </form>
+            <form th:action="@{/transfer}" method="get">
+                <button type="submit">Transfer</button>
+            </form>
+            <form th:action="@{/change_pin}" method="get">
+                <button type="submit">Change PIN</button>
+            </form>
+            <form th:action="@{/transactions}" method="get">
+                <button type="submit">Statement</button>
+            </form>
+            <form th:action="@{/logout}" method="get">
+                <button type="submit">Cancel Transaction</button>
+            </form>
+        </div>
+    </div>
+
+
+</main>
+<!-- /.container -->
+
+<script type="text/javascript" th:src="@{webjars/bootstrap/4.2.1/js/bootstrap.min.js}"></script>
+</body>
+</html>

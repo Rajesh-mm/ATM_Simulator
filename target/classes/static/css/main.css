@@ -1,0 +1,35 @@
+body {
+  padding-top: 5rem;
+  background-color: #B9EDDD !important;
+}
+.starter-template {
+  padding: 3rem 1.5rem;
+  text-align: center;
+}
+
+h1{
+	color:#569DAA !important;
+}
+
+h2{
+	color:#577D86 !important;
+}
+
+.btn-group button {
+  background-color: #87CBB9 /* Green background */ !important;
+  border: 1px solid #577D86 /* Green border */ !important;
+  color: white !important; /* White text */
+  padding: 10px 24px; /* Some padding */
+  cursor: pointer; /* Pointer/hand icon */
+  width: 50%; /* Set a width if needed */
+  display: block; /* Make the buttons appear below each other */
+}
+
+.btn-group button:not(:last-child) {
+  border-bottom: none; /* Prevent double borders */ 
+}
+
+/* Add a background color on hover */
+.btn-group button:hover {
+  background-color: #87CBB9 !important;
+}

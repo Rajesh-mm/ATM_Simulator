@@ -1,0 +1,128 @@
+<!DOCTYPE HTML>
+<html lang="en" xmlns:th="http://www.thymeleaf.org">
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+    <title>Change PIN</title>
+    <link rel="stylesheet" th:href="@{webjars/bootstrap/4.2.1/css/bootstrap.min.css}"/>
+    <style type="text/css">
+                body {
+                padding-top: 5rem;
+                background-color: #B9EDDD !important;
+            }
+            .starter-template {
+                padding: 3rem 1.5rem;
+                text-align: center;
+            }
+
+            .container {
+                width: 500px;
+                margin: 0 auto;
+                margin-top: 20px;
+                text-align: center;
+            }
+
+            label{
+                color: #569DAA;
+                font-size: 1.2rem;
+                font-weight: bold;
+                margin-bottom: 1rem;
+                text-align: center;
+            }
+
+            h1{
+                color:#569DAA !important;
+            }
+
+            h2{
+                color:#577D86 !important;
+            }
+
+            .btn-group {
+                display: flex;
+                justify-content: center;
+                margin-top: 20px;
+            }
+
+            .btn-group button {
+                background-color: #87CBB9;
+                border: 1px solid #577D86;
+                color: white;
+                padding: 10px 24px;
+                cursor: pointer;
+                display: inline-block;
+                width: 200px;
+                height: 60px;
+                font-size: 18px;
+                font-weight: bold;
+                margin-right: 20px;
+            }
+
+            .btn-group button {
+                width: auto;
+                white-space: normal;
+            }
+
+            .btn-group button:last-child {
+                margin-right: 0;
+            }
+
+            .btn-group button:hover {
+                background-color: #569DAA;
+                border-color: #B9EDDD;
+            }
+
+            .submit-btn{
+                background-color: #87CBB9;
+                border: 1px solid #577D86;
+                color: white;
+                padding: 10px 24px;
+                cursor: pointer;
+                display: block;
+                width: auto;
+                height: 150%;
+                white-space: normal;
+                font-size: 18px;
+                font-weight: bold;
+                margin-right: 20px;
+            }
+
+            .submit-btn:hover{
+                background-color: #569DAA;
+                border-color: #B9EDDD;
+            }
+    </style>
+
+</head>
+<body>
+    <main role="main" class="container">
+        <div class="starter-template">
+            <h1>Change PIN</h1>
+            <div th:if="${message}" th:text="${message}" class="alert alert-success"></div>
+            <div class="btn-group">
+                <form th:action="@{/menu}" method="get">
+                    <button type="submit" class="btn btn-primary">Main Menu</button>
+                </form>
+                <form th:action="@{/logout}" method="get">
+                    <button type="submit" class="btn btn-danger">Cancel Transaction</button>
+                </form>
+            </div>
+        </div>
+        <div class="container">
+            <form action="/change_pin" method="post">
+                <label for="pin">New PIN:</label>
+                <input type="password" id="pin" name="pin" required>
+                <br>
+                <div class="btn-group">
+                    <input type="submit" value="Change Pin" class="btn submit-btn" />
+                </div>
+            </form>
+        </div>
+
+
+    </main>
+    <script th:src="@{webjars/jquery/3.3.1/jquery.min.js}"></script>
+    <script th:src="@{webjars/popper.js/1.14.7/umd/popper.min.js}"></script>
+    <script th:src="@{webjars/bootstrap/4.2.1/js/bootstrap.min.js}"></script>
+</body>
+</html>

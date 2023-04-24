@@ -1,0 +1,75 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Startup Page</title>
+    <style type="text/css">
+
+        body {
+          background-color: #B9EDDD;
+        }
+
+        .loader-container {
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+            align-items: center;
+            height: 100vh;
+        }
+
+        .loader {
+            border: 16px solid #B9EDDD;
+            border-top: 16px solid #569DAA;
+            border-radius: 50%;
+            width: 120px;
+            height: 120px;
+            animation: spin 2s linear infinite;
+        }
+
+        @keyframes spin {
+            0% { transform: rotate(0deg); }
+            100% { transform: rotate(360deg); }
+        }
+
+        .loading-text {
+            font-size: 36px;
+            font-weight: bold;
+            margin-bottom: 20px;
+            text-align: center;
+        }
+
+        .loading-dots {
+            font-size: 48px;
+            font-weight: bold;
+            animation: blink 1s infinite;
+        }
+
+        .loading-dots span {
+            animation-delay: 0.2s;
+        }
+
+        @keyframes blink {
+            0% {
+                color: #569DAA;
+            }
+            49% {
+                color: #B9EDDD;
+            }
+            50% {
+                color: #569DAA;
+            }
+            99% {
+                color: #B9EDDD;
+            }
+            100% {
+                color: #569DAA;
+            }
+        }
+    </style>
+</head>
+<body>
+    <div class="loader-container">
+        <div class="loading-text">Initializing<span class="loading-dots"><span>.</span><span>.</span><span>.</span></span></div>
+        <div class="loader" id="loader"></div>
+    </div>
+</body>
+</html>

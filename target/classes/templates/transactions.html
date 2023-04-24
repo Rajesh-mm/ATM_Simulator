@@ -1,0 +1,130 @@
+<!DOCTYPE html>
+<html xmlns:th="http://www.thymeleaf.org">
+<head>
+    <title>mini-statement</title>
+    <link rel="stylesheet" th:href="@{webjars/bootstrap/4.2.1/css/bootstrap.min.css}"/>
+    <style type="text/css">
+        body {
+            padding-top: 5rem;
+            background-color: #B9EDDD !important;
+        }
+        .starter-template {
+            padding: 3rem 1.5rem;
+            text-align: center;
+        }
+        .container {
+        width: 500px;
+        margin: 0 auto;
+        margin-top: 20px;
+        text-align: center;
+    }
+
+    label{
+        color: #569DAA;
+        font-size: 1.2rem;
+        font-weight: bold;
+        margin-bottom: 1rem;
+        text-align: center;
+    }
+
+    h1{
+        color:#569DAA !important;
+    }
+
+    h2{
+        color:#577D86 !important;
+    }
+
+    .btn-group {
+        display: flex;
+        justify-content: center;
+        margin-top: 20px;
+    }
+
+    .btn-group button {
+        background-color: #87CBB9;
+        border: 1px solid #577D86;
+        color: white;
+        padding: 10px 24px;
+        cursor: pointer;
+        display: inline-block;
+        width: 200px;
+        height: 60px;
+        font-size: 18px;
+        font-weight: bold;
+        margin-right: 20px;
+    }
+
+    .btn-group button {
+        width: auto;
+        white-space: normal;
+    }
+
+    .btn-group button:last-child {
+        margin-right: 0;
+    }
+
+    .btn-group button:hover {
+        background-color: #569DAA;
+        border-color: #B9EDDD;
+    }
+
+    .submit-btn, .reset-btn {
+        background-color: #87CBB9;
+        border: 1px solid #577D86;
+        color: white;
+        padding: 10px 24px;
+        cursor: pointer;
+        display: block;
+        width: auto;
+        height: 150%;
+        white-space: normal;
+        font-size: 18px;
+        font-weight: bold;
+        margin-right: 20px;
+    }
+
+    .submit-btn:hover, .reset-btn:hover {
+        background-color: #569DAA;
+        border-color: #B9EDDD;
+    }
+</style>
+</head>
+<body>
+<main role="main" class="container">
+    <div class="starter-template">
+        <h1>mini-statement</h1>
+    </div>
+    <table>
+        <thead>
+            <tr>
+                <th>Transaction ID</th>
+                <th>Transaction Type</th>
+                <th>Transaction Time</th>
+                <th>Account Number</th>
+                <th>Transaction Amount</th>
+            </tr>
+        </thead>
+        <tbody>
+            <!-- <p th:text="${Transactions}">Hello</p> -->
+            <tr th:each="transaction : ${Transactions}">
+                <td th:text="${transaction.transactionId}"></td>
+                <td th:text="${transaction.type}"></td>
+                <td th:text="${transaction.time}"></td>
+                <td th:text="${transaction.accountNo}"></td>
+                <td th:text="${transaction.amount}"></td>
+            </tr>
+        </tbody>
+    </table>
+    <div class="btn-group">
+        <form th:action="@{/menu}" method="get">
+            <button type="submit">Main Menu</button>
+        </form>
+        <form th:action="@{/logout}" method="get">
+            <button type="submit">Logout</button>
+        </form>
+    </div>
+</main>
+
+</body>
+</html>
