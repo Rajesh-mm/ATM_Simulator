@@ -1,7 +1,7 @@
 package com.atm.model;
 
 import org.springframework.data.repository.CrudRepository;
-import org.springframework.stereotype.Repository;
+// import org.springframework.stereotype.Repository;
 
 // import java.sql.Timestamp;
 import java.util.List;
@@ -17,7 +17,7 @@ import java.util.List;
  *
  * 
  */
-@Repository
+// @Repository
 public interface TransactionRepository extends CrudRepository<Transaction, Integer> {
     /**
      * Function to save a transaction to the database
