@@ -1,4 +1,4 @@
-package com.atm.dao;
+package com.atm.model;
 
 import org.springframework.data.repository.CrudRepository;
 import org.springframework.stereotype.Repository;

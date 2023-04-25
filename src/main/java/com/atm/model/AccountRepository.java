@@ -1,8 +1,8 @@
-package com.atm.dao;
+package com.atm.model;
 
 import org.springframework.data.repository.CrudRepository;
 // import org.springframework.stereotype.Repository;
-// import com.atm.dao.Account;
+// import com.atm.model.Account;
 
 import java.util.List;
 

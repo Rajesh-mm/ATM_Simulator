@@ -1,4 +1,4 @@
-package com.atm.dao;
+package com.atm.model;
 
 import javax.persistence.Entity;
 // import javax.persistence.EntityManager;

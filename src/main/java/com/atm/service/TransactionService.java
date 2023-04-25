@@ -1,7 +1,7 @@
 package com.atm.service;
 
-import com.atm.dao.Transaction;
-import com.atm.dao.TransactionRepository;
+import com.atm.model.Transaction;
+import com.atm.model.TransactionRepository;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Service;
 

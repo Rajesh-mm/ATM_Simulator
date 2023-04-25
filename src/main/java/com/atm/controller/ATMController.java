@@ -1,7 +1,7 @@
 package com.atm.controller;
 
-import com.atm.dao.Account;
-import com.atm.dao.Transaction;
+import com.atm.model.Account;
+import com.atm.model.Transaction;
 import com.atm.service.AccountService;
 import com.atm.service.TransactionService;
 import org.springframework.beans.factory.annotation.Autowired;
