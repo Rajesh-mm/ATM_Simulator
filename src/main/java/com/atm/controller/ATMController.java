@@ -132,7 +132,7 @@ public class ATMController {
             System.out.println("Login error");
             return "welcome";
         } else if (result == 3) {
-            model.addAttribute("error", "Account locked");
+            model.addAttribute("error", "Account locked go to the bank and get it correct");
             System.out.println("Login error");
             return "welcome";
         } else {
@@ -224,7 +224,7 @@ public class ATMController {
         //session.removeAttribute("account");
         model.addAttribute("account", new Account());
 
-        httpServletResponse.setHeader("Refresh", "10;url=shutdown");
+        httpServletResponse.setHeader("Refresh", "100;url=shutdown");
 
         return "welcome";
       }

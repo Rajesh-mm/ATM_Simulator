@@ -9,7 +9,7 @@ import org.springframework.stereotype.Service;
 import java.util.List;
 
 /**
- * The TransactionService class provides business logic for an account
+ * The TransactionService class provides business logic for an transaction
  * 
  * 
  * 
