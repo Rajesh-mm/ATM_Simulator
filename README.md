@@ -1,4 +1,4 @@
-# ATM Machine
+# ATM Simulator
 
 ## Overview
 The ATM Machine project is an implementation of a simple ATM system using HTML, CSS, JavaScript, and Java. It follows the MVC (Model-View-Controller) design pattern to organize the code structure.
