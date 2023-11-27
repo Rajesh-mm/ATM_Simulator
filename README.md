@@ -21,7 +21,7 @@ The ATM Machine project is an implementation of a simple ATM system using HTML, 
 To run the ATM Machine project on your local machine, follow these steps:
 
 ### Prerequisites
-- [Java](https://www.java.com/en/download/)
+[Java](https://www.java.com/en/download/)
 
 ### Installation
 1. Clone the repository:
